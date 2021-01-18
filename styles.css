@@ -1,0 +1,131 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: url(clouds.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  border: 2px solid brown;
+  border-radius: 20px;
+  box-shadow: 0px 2px 18px rgb(0, 0, 0);
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid brown;
+  outline: none;
+}
+
+.inputText {
+  width: 79%;
+  height: 30px;
+}
+
+.btn {
+  width: 20%;
+  height: 34px;
+  background-color: brown;
+  outline: none;
+  border-style: none;
+  color: white;
+  font-size: calc(6px + (16 - 6) * ((100vw - 320px) / (1920 - 320)));
+  cursor: pointer;
+}
+
+.showInput {
+  margin-top: 5%;
+  width: 100%;
+  height: 41vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid brown;
+  padding: 10px 0 10px 0;
+}
+
+.duo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.finger {
+  width: 36px;
+  color: brown;
+  padding-right: 8px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  color:brown;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-size: calc(8px + (22 - 8) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.ion{
+  transition: .2s ease-in-out;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+   cursor: pointer;
+}
+
+.ion:hover {
+   transform: scale(1.2);
+}
+
+.crossout {
+  text-decoration: line-through 2px solid red;
+  text-decoration-color:brown;
+}
+
+.clear {
+  width: 160px;
+  height: 40px;
+  margin-top: 20px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.clear:hover {
+   transform: scale(1.1);
+   box-shadow: 0px 0px 18px rgb(48, 48, 48);
+}
