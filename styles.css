@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-image: url(clouds.jpg);
+  background-image: url(bridge.jpg);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -23,7 +23,8 @@ body {
   padding: 5%;
   border: 2px solid brown;
   border-radius: 20px;
-  box-shadow: 0px 2px 18px rgb(0, 0, 0);
+  box-shadow: 0px 2px 18px rgb(97, 15, 15);
+ background: linear-gradient(to bottom, transparent,#ffffff 100% );
 }
 
 .wrapper {
@@ -49,7 +50,7 @@ input {
 .btn {
   width: 20%;
   height: 34px;
-  background-color: brown;
+  background-color: rgb(146, 23, 23);
   outline: none;
   border-style: none;
   color: white;
@@ -72,7 +73,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid brown;
+  border-bottom: 1px solid rgb(146, 23, 23);
   padding: 10px 0 10px 0;
 }
 
@@ -84,7 +85,7 @@ input {
 
 .finger {
   width: 36px;
-  color: brown;
+  color:rgb(146, 23, 23);
   padding-right: 8px;
 }
 
@@ -94,7 +95,7 @@ input {
   justify-content: center;
   align-items: center;
   font-family: Georgia, Times, 'Times New Roman', serif;
-  color:brown;
+  color:rgb(146, 23, 23);
   font-size: 1.4rem;
   cursor: pointer;
   font-size: calc(8px + (22 - 8) * ((100vw - 320px) / (1920 - 320)));
@@ -113,8 +114,8 @@ input {
 }
 
 .crossout {
-  text-decoration: line-through 2px solid red;
-  text-decoration-color:brown;
+  text-decoration: line-through 2px solid rgb(146, 23, 23);
+  text-decoration-color: rgb(146, 23, 23);
 }
 
 .clear {
@@ -127,5 +128,5 @@ input {
 
 .clear:hover {
    transform: scale(1.1);
-   box-shadow: 0px 0px 18px rgb(48, 48, 48);
+   box-shadow: 0px 0px 10px rgb(63, 63, 63);
 }
