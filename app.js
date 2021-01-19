@@ -38,7 +38,7 @@ const testModule2 = (function () {
         const html = `<div class="items" id="${id}">
                         <div class="duo">
                           <img src="finger.png" class="finger"/>
-                          <div class="name" job="didit">${entry.toUpperCase()}</div>
+                          <div class="name">${entry.toUpperCase()}</div>
                         </div>
                           <img src="removebutton.png" class="ion"/>
                       </div>`;
@@ -53,7 +53,7 @@ const testModule2 = (function () {
         };
 
         data.push(obj);
-
+        console.log(obj)
       } else if (entry && typeof entry === "object") {
 
         lineThrough = entry.done === false ? "" : "crossout";
@@ -61,7 +61,7 @@ const testModule2 = (function () {
         const html2 = `<div class="items" id="${entry.id}">
                         <div class="duo">
                           <img src="finger.png" class="finger"/>
-                          <div class="name ${lineThrough}" job="didit">${entry.name.toUpperCase()}</div>
+                          <div class="name ${lineThrough}">${entry.name.toUpperCase()}</div>
                         </div>
                           <img src="removebutton.png" class="ion"/>
                       </div>`;
@@ -70,7 +70,7 @@ const testModule2 = (function () {
           .insertAdjacentHTML("beforeend", html2);
         obj = entry
         data.push(obj);
-
+        console.log(obj)
       } else {
         alert("No data!")
         return
@@ -79,16 +79,16 @@ const testModule2 = (function () {
       localStorage.setItem("DATA", JSON.stringify(data));
     },
 
-    lineThrough: function (elementJob, item) {
+    lineThrough: function (item) {
       let elementID = item.parentNode.parentNode.id
       let itemID;
 
       for (let el of data) {
         itemID = el.id
-        if (elementJob === "didit" && !item.classList.contains('crossout') && itemID == elementID) {
+        if (!item.classList.contains('crossout') && itemID == elementID) {
           item.classList.add('crossout')
           el.done = true
-        } else if (elementJob === "didit" && item.classList.contains('crossout') && itemID == elementID) {
+        } else if (item.classList.contains('crossout') && itemID == elementID) {
           item.classList.remove('crossout')
           el.done = false
         }
@@ -146,8 +146,7 @@ const testModule3 = (function (testMod1, testMod2) {
 
   const crossOut = function (e) {
     const element = e.target
-    const elementJob = element.attributes.job.value
-    testMod2.lineThrough(elementJob, element)
+    testMod2.lineThrough(element)
   }
 
   const removeItem = function (e) {
