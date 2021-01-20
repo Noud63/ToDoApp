@@ -109,6 +109,7 @@ input {
 
 .finger {
   width: 36px;
+  height: auto;
   color:rgb(146, 23, 23);
   padding-right: 8px;
 }
@@ -122,19 +123,17 @@ input {
   color:rgb(146, 23, 23);
   font-size: 1.4rem;
   cursor: pointer;
-  font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
 }
 
-.ion{
-  transition: .2s ease-in-out;
-  width: 24px;
-  height: 24px;
-  margin-right: 5px;
+ion-icon {
+  color:darkred;
+   font-size: 21px;
    cursor: pointer;
 }
 
-.ion:hover {
-   transform: scale(1.2);
+.trash {
+  margin-right: 3px;
 }
 
 .crossout {

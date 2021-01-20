@@ -37,10 +37,9 @@ const testModule2 = (function () {
 
         const html = `<div class="items" id="${id}">
                         <div class="duo">
-                          <img src="finger.png" class="finger"/>
-                          <div class="name">${entry.toUpperCase()}</div>
+                          <div class="name"><img src="finger.png" class="finger">${entry.toUpperCase()}</div>
                         </div>
-                          <img src="removebutton.png" class="ion"/>
+                          <ion-icon name="trash"></ion-icon>
                       </div>`;
         document
           .querySelector(".showInput")
@@ -59,12 +58,11 @@ const testModule2 = (function () {
         lineThrough = entry.done === false ? "" : "crossout";
 
         const html2 = `<div class="items" id="${entry.id}">
-                        <div class="duo">
-                          <img src="finger.png" class="finger"/>
-                          <div class="name ${lineThrough}">${entry.name.toUpperCase()}</div>
-                        </div>
-                          <img src="removebutton.png" class="ion"/>
-                      </div>`;
+                         <div class="duo">
+                           <div class="name ${lineThrough}"><img src="finger.png" class="finger">${entry.name.toUpperCase()}</div>
+                         </div>
+                         <ion-icon name="trash"></ion-icon>
+                       </div>`;
         document
           .querySelector(".showInput")
           .insertAdjacentHTML("beforeend", html2);
