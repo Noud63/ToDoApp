@@ -26,9 +26,7 @@ const testModule2 = (function () {
     displayInput: function (entry) {
       if (entry && typeof entry === "string") {
 
-        let id = uuid.v4()
-        id = id.split("-")
-        id = id.slice(0, 1)
+        let id = uuid.v4().split("-").slice(0, 1)
         id = id[0].split("")
         id = id.filter(num => {
           return parseInt(num) == num
@@ -37,7 +35,7 @@ const testModule2 = (function () {
 
         const html = `<div class="items" id="${id}">
                         <div class="duo">
-                          <div class="name"><img src="finger.png" class="finger">${entry.toUpperCase()}</div>
+                          <img src="finger.png" class="finger"><div class="name">${entry.toUpperCase()}</div>
                         </div>
                           <ion-icon name="trash"></ion-icon>
                       </div>`;
@@ -59,7 +57,7 @@ const testModule2 = (function () {
 
         const html2 = `<div class="items" id="${entry.id}">
                          <div class="duo">
-                           <div class="name ${lineThrough}"><img src="finger.png" class="finger">${entry.name.toUpperCase()}</div>
+                           <img src="finger.png" class="finger"><div class="name ${lineThrough}">${entry.name.toUpperCase()}</div>
                          </div>
                          <ion-icon name="trash"></ion-icon>
                        </div>`;
@@ -79,6 +77,7 @@ const testModule2 = (function () {
 
     lineThrough: function (item) {
       let elementID = item.parentNode.parentNode.id
+      console.log(item)
       let itemID;
 
       for (let el of data) {
@@ -148,7 +147,7 @@ const testModule3 = (function (testMod1, testMod2) {
   }
 
   const removeItem = function (e) {
-    let itemID = e.target.parentNode.id;
+    let itemID = e.target.parentNode.id
     testMod2.deleteItem(itemID);
   };
 
@@ -158,7 +157,7 @@ const testModule3 = (function (testMod1, testMod2) {
 
   return {
     init: function () {
-      document.querySelector('.showInput').addEventListener('click', crossOut)
+      document.querySelector(".showInput").addEventListener("click", crossOut)
       document.querySelector(".btn").addEventListener("click", getData);
       document.querySelector(".clear").addEventListener("click", deleteData);
       document

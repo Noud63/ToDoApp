@@ -102,16 +102,21 @@ input {
 }
 
 .duo {
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .finger {
+  display:block;
   width: 36px;
   height: auto;
   color:rgb(146, 23, 23);
   padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .name {
@@ -122,13 +127,13 @@ input {
   font-family: Georgia, Times, 'Times New Roman', serif;
   color:rgb(146, 23, 23);
   font-size: 1.4rem;
+  font-size: calc(16px + (17 - 16) * ((100vw - 320px) / (1920 - 320)));
   cursor: pointer;
-  font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
 }
 
 ion-icon {
   color:darkred;
-   font-size: 21px;
+   font-size: 20px;
    cursor: pointer;
 }
 
